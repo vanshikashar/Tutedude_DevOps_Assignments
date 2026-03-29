@@ -4,8 +4,8 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# MongoDB Atlas connection
-client = MongoClient("YOUR_MONGODB_ATLAS_CONNECTION_STRING")
+# MongoDB Atlas 
+client = MongoClient("mongodb+srv://Vanshii:Vanshika%4074281@cluster1.fn0pahf.mongodb.net/?appName=Cluster1")
 db = client["flaskdb"]
 collection = db["users"]
 
@@ -51,4 +51,4 @@ def success():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
